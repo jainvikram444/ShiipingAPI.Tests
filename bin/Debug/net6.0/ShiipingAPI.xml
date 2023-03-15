@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ShiipingAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ShiipingAPI.ShipsController.GetShip">
+             <summary>
+             Get Ship List.
+             </summary>        
+             <returns>List of Ships</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Ships 
+            
+             </remarks>
+             <response code="200">Returns the list of Ship</response>
+             <response code="400">If the item is null</response>
+        </member>
+        <member name="M:ShiipingAPI.ShipsController.GetShip(System.Int32)">
+             <summary>
+             Get Ship Details.
+             </summary>        
+             <param name="id"></param>
+             <returns>Details of Ship</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Ships/5
+            
+             </remarks>
+             <response code="200">Returns the details of Ship</response>
+             <response code="400">If the item is null</response>
+        </member>
+        <member name="M:ShiipingAPI.ShipsController.PutShip(System.Int32,ShiipingAPI.Models.Ship)">
+             <summary>
+             Update Ship Velocity
+             </summary>        
+             <param name="id"></param>
+             <returns>Details of Ship</returns>
+             <remarks>
+             Sample request:
+            
+                 PUT /api/Ships/5
+                 {
+                    "velocity": 30
+                 }
+            
+             </remarks>
+             <response code="200">Returns the details of Ship</response>
+             <response code="400">If the item is null</response>     
+        </member>
+        <member name="M:ShiipingAPI.ShipsController.PostShip(ShiipingAPI.Models.Ship)">
+             <summary>
+             Create Ship.
+             </summary>        
+             <returns>Details of Ship</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /api/Ships
+                 {
+                    "name": "string",
+                    "description": "string",
+                    "latitude": 56.2132132,
+                    "longitude": 56.1654,
+                    "velocity": 30
+                 }
+            
+             </remarks>
+             <response code="200">Returns the details of Ship</response>
+             <response code="400">If the item is null</response>
+        </member>
+        <member name="M:ShiipingAPI.ShipsController.DeleteShip(System.Int32)">
+             <summary>
+             Delete Ship.
+             </summary>        
+             <param name="id"></param>
+             <returns>Delete Ship</returns>
+             <remarks>
+             Sample request:
+            
+                 DELETE /api/Ships/5
+            
+             </remarks>
+             <response code="200">Returns blank response</response>
+             <response code="404">If the item is null</response>
+        </member>
+    </members>
+</doc>
