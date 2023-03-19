@@ -22,7 +22,7 @@
              <summary>
              Get Ship Details.
              </summary>        
-             <param name="id"></param>
+             <param name="Id"></param>
              <returns>Details of Ship</returns>
              <remarks>
              Sample request:

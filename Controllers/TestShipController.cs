@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.FlowAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Moq;
+using NuGet.Protocol;
 using ShiipingAPI.Controllers;
 using ShiipingAPI.Data;
 using ShiipingAPI.Models;
@@ -28,27 +30,32 @@ namespace ShiipingAPI.Tests.Controllers
         }
 
         [Fact]
-        public void GetShipList_ShipList()
+        public async void GetShipList_ShipList()
         {
            // arrange
             var shipList = ShipMockData.GetShips();
             shipService.Setup(x => x.GetShipList())
-                .Returns(shipList);
+                .ReturnsAsync(shipList);
             var shipsController = new ShipsController(shipService.Object);
 
             //act
-            var shipResult = shipsController.GetShip();
+            var shipResult = await shipsController.GetShip();
+            var result = shipResult.Result as OkObjectResult;
+            var response = result.Value as Response<Ship>;
+
 
             //assert
-            Assert.NotNull(shipResult);
-            Assert.Equal(ShipMockData.GetShips().Count(), shipResult.Count());
-            Assert.Equal(ShipMockData.GetShips().ToString(), shipResult.ToString());
-            Assert.True(shipList.Equals(shipResult));
-
+            Assert.NotNull(response);
+            Assert.Equal(ShipMockData.GetShips().Count(), response.IsSuccess ? response.ResponseData.Count() : 0);
+            Assert.Equal(ShipMockData.GetShips().ToString(), response.IsSuccess ? response.ResponseData.ToString() : null);
+            Assert.True(shipList[0].Equals(response.IsSuccess ? response.ResponseData.First() : null));
+            Assert.True(shipList[1].Equals(response.IsSuccess ? response.ResponseData.ToList()[1] : null));
+            Assert.True(shipList[2].Equals(response.IsSuccess ? response.ResponseData.ToList()[2] : null));
+            Assert.True(shipList[3].Equals(response.IsSuccess ? response.ResponseData.ToList()[3] : null));
         }
 
         [Fact]
-        public void GetShipByID_Ship()
+        public async void GetShipByID_Ship()
         {
             //arrange
             var shipList = ShipMockData.GetShips();
@@ -62,16 +69,20 @@ namespace ShiipingAPI.Tests.Controllers
                 Longitude = shipList[1].Longitude,
             };
             shipService.Setup(x => x.GetShipById(2))
-                .Returns(shipPortResponse);
+                .ReturnsAsync(shipPortResponse);
             var shipsController = new ShipsController(shipService.Object);
 
             //act
-            var ShipResult = shipsController.GetShip(2);
+            var shipResult = await shipsController.GetShip(2);
+            var result = shipResult.Result as OkObjectResult;
+            var response = result.Value as Response<ShipPortResponse>;
+            var responseData = response.ResponseData.FirstOrDefault();
+
 
             //assert
-            Assert.NotNull(ShipResult);
-            Assert.Equal(shipList[1].Id, ShipResult.Id);
-            Assert.True(shipList[1].Id == ShipResult.Id);
+            Assert.NotNull(response);
+            Assert.Equal(shipList[1].Id, responseData.Id);
+            Assert.True(shipList[1].Id == responseData.Id);
         }
 
 

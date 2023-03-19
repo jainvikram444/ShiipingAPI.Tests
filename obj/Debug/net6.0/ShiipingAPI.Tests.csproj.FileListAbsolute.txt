@@ -356,3 +356,4 @@ C:\Users\jainv\OneDrive\Documents\vikram\projects\Dot-NET\core6\ShiipingAPI.Test
 C:\Users\jainv\OneDrive\Documents\vikram\projects\Dot-NET\core6\ShiipingAPI.Tests\obj\Debug\net6.0\ShiipingAPI.Tests.pdb
 C:\Users\jainv\OneDrive\Documents\vikram\projects\Dot-NET\core6\ShiipingAPI.Tests\obj\Debug\net6.0\ShiipingAPI.Tests.genruntimeconfig.cache
 C:\Users\jainv\OneDrive\Documents\vikram\projects\Dot-NET\core6\ShiipingAPI.Tests\obj\Debug\net6.0\ref\ShiipingAPI.Tests.dll
+C:\Users\jainv\OneDrive\Documents\vikram\projects\Dot-NET\core6\ShiipingAPI.Tests\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll

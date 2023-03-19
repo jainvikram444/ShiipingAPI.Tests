@@ -15,6 +15,7 @@ namespace ShiipingAPI.Tests.MockData
             {
                 new Ship
                 {
+                    Id = 1,
                     Name = "Ship-1",
                     Description = "Near by Sri Lanka",
                     Latitude = 4.730407,
@@ -25,6 +26,7 @@ namespace ShiipingAPI.Tests.MockData
 
                 new Ship
                 {
+                    Id = 2,
                     Name = "Ship-2",
                     Description = "Near by Malasia",
                     Latitude = 6.778805,
@@ -35,6 +37,7 @@ namespace ShiipingAPI.Tests.MockData
 
                 new Ship
                 {
+                    Id = 3,
                     Name = "Ship-3",
                     Description = "South Taiwan",
                     Latitude = 23.796708,
@@ -45,6 +48,7 @@ namespace ShiipingAPI.Tests.MockData
 
                 new Ship
                 {
+                    Id = 4,
                     Name = "Ship-4",
                     Description = "Near by Japan",
                     Latitude = 41.422623,

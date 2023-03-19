@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RGorxU/nBIlG6JLz2r53hU2lyNSRd+53rYRF6yNS04jl/nv9Q1HCOR/jdVCrMP3zsH8w0JIO202mutBMPqJ7yw==",
+  "dgSpecHash": "qkblHU1GE7/YmGEbbyrCtJaNgeKaQ+lKhWAiW9bU2rcSWPPvqdsR3HoTmS2Gi72/q/Hmb2KeMhafzSjk5NMJlQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jainv\\OneDrive\\Documents\\vikram\\projects\\Dot-NET\\core6\\ShiipingAPI.Tests\\ShiipingAPI.Tests.csproj",
   "expectedPackageFiles": [
@@ -106,8 +106,9 @@
     "C:\\Users\\jainv\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\jainv\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore\\6.3.0\\swashbuckle.aspnetcore.6.3.0.nupkg.sha512",
-    "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.3.0\\swashbuckle.aspnetcore.swagger.6.3.0.nupkg.sha512",
-    "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.3.0\\swashbuckle.aspnetcore.swaggergen.6.3.0.nupkg.sha512",
+    "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.5.0\\swashbuckle.aspnetcore.annotations.6.5.0.nupkg.sha512",
+    "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\jainv\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.3.0\\swashbuckle.aspnetcore.swaggerui.6.3.0.nupkg.sha512",
     "C:\\Users\\jainv\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\jainv\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
