@@ -16,7 +16,8 @@
             
              </remarks>
              <response code="200">Returns the list of Ship</response>
-             <response code="400">If the item is null</response>
+             <response code="404">If record not found </response>
+             <response code="400">If something wrong in process</response>
         </member>
         <member name="M:ShiipingAPI.ShipsController.GetShip(System.Int32)">
              <summary>
@@ -30,10 +31,11 @@
                  GET /api/Ships/5
             
              </remarks>
-             <response code="200">Returns the details of Ship</response>
-             <response code="400">If the item is null</response>
+             <response code="200">Returns the Ship details</response>
+             <response code="404">If record not found </response>
+             <response code="400">If something wrong in process</response>    
         </member>
-        <member name="M:ShiipingAPI.ShipsController.PutShip(System.Int32,ShiipingAPI.Models.Ship)">
+        <member name="M:ShiipingAPI.ShipsController.PutShip(System.Int32,ShiipingAPI.RespnseModels.ShipRequest)">
              <summary>
              Update Ship Velocity
              </summary>        
@@ -48,10 +50,11 @@
                  }
             
              </remarks>
-             <response code="200">Returns the details of Ship</response>
-             <response code="400">If the item is null</response>     
+             <response code="200">Returns the updated details of Ship</response>
+             <response code="404">If record not found </response>
+             <response code="400">If something wrong in process</response>
         </member>
-        <member name="M:ShiipingAPI.ShipsController.PostShip(ShiipingAPI.Models.Ship)">
+        <member name="M:ShiipingAPI.ShipsController.PostShip(ShiipingAPI.RespnseModels.ShipRequest)">
              <summary>
              Create Ship.
              </summary>        
@@ -68,15 +71,16 @@
                     "velocity": 30
                  }
             
-             </remarks>
-             <response code="200">Returns the details of Ship</response>
-             <response code="400">If the item is null</response>
+             </remarks>       
+             <response code="200">Returns the inserted record of Ship</response>
+             <response code="404">If record not inserted due some resBtriction</response>
+             <response code="400">If something wrong in process</response>
         </member>
         <member name="M:ShiipingAPI.ShipsController.DeleteShip(System.Int32)">
              <summary>
              Delete Ship.
              </summary>        
-             <param name="id"></param>
+             <param name="Id"></param>
              <returns>Delete Ship</returns>
              <remarks>
              Sample request:
@@ -84,8 +88,9 @@
                  DELETE /api/Ships/5
             
              </remarks>
-             <response code="200">Returns blank response</response>
-             <response code="404">If the item is null</response>
+             <response code="200">Returns the inserted record of Ship</response>
+             <response code="404">If record not inserted due some resBtriction</response>
+             <response code="400">If something wrong in process</response>
         </member>
     </members>
 </doc>

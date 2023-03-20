@@ -1,4 +1,5 @@
 ﻿using ShiipingAPI.Models;
+using ShiipingAPI.RespnseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace ShiipingAPI.Tests.MockData
 {
     public class ShipMockData
     {
+      
+      
         public static List<Ship> GetShips()
         {
             return new List<Ship>
@@ -57,6 +60,6 @@ namespace ShiipingAPI.Tests.MockData
                     Status = 1
                 }
             };
-        }
+        }       
     }
 }

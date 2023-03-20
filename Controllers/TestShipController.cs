@@ -87,21 +87,35 @@ namespace ShiipingAPI.Tests.Controllers
 
 
         [Fact]
-        public void AddShip_Ship()
+        public async void AddShip_Ship()
         {
             //arrange
-            var ShipList = ShipMockData.GetShips();
-            shipService.Setup(x => x.AddShip(ShipList[2]))
-                .Returns(ShipList[2]);
+            var shipList = ShipMockData.GetShips();
+ 
+            var shipRequest = new ShipRequest
+            {
+                Name= shipList[2].Name,
+                Description = shipList[2].Description,
+                Latitude= shipList[2].Latitude,
+                Longitude= shipList[2].Longitude,
+                Velocity = shipList[2].Velocity
+            };
+                      
+
+            shipService.Setup(x => x.AddShip(shipRequest))
+                .ReturnsAsync(shipList[2]);
             var shipsController = new ShipsController(shipService.Object);
 
             //act
-            var ShipResult = shipsController.PostShip(ShipList[2]);
+            var shipResult = await shipsController.PostShip(shipRequest);
+            var result = shipResult.Result as OkObjectResult;
+            var response = result.Value as Response<Ship>;
+            var responseData = response.ResponseData.FirstOrDefault();
 
             //assert
-            Assert.NotNull(ShipResult);
-            Assert.Equal(ShipList[2].Id, ShipResult.Id);
-            Assert.True(ShipList[2].Id == ShipResult.Id);
+            Assert.NotNull(shipResult);
+            Assert.Equal(shipRequest.Name, responseData.Name);
+            Assert.True(shipRequest.Name == responseData.Name);
         }
 
     }
